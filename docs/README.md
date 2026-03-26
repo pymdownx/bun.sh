@@ -20,9 +20,16 @@ Run the development server:
 ```bash
 mint dev
 ```
+# Custom Ports
+Mintlify uses port 3000 by default. You can use the `--port flag` to customize the port Mintlify runs on. `npm i -g mint`
+For example, use this command to run in port 3333:
 
+```bash
+mint dev --port 3333
+npm i -g mint
+```
 The site will be available at `http://localhost:3000`.
-
+npm i -g mint
 ## Contributing
 
 Contributions are welcome! Please open an issue or submit a pull request.
