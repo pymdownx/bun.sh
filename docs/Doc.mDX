@@ -5,6 +5,7 @@
 </p>
 <h1 align="center">Bun Documentation</h1>
 
+
 Official documentation for Bun: the fast, all-in-one JavaScript runtime.
 
 ## Development
@@ -28,7 +29,7 @@ For example, use this command to run in port 3333:
 mint dev --port 3333
 npm i -g mint
 ```
-The site will be available at `http://localhost:3000`.
+The site will be available at `http://127.0.0.1:3333`.
 npm i -g mint
 ## Contributing
 
@@ -46,8 +47,8 @@ Under the hood, Bun uses the [JavaScriptCore engine](https://developer.apple.com
 
 | Command         | Time     |
 | --------------- | -------- |
-| `bun hello.js`  | `5.2ms`  |
-| `node hello.js` | `25.1ms` |
+| `bun hello.jsx`  | `5.2ms`  |
+| `node hello.j` | `25.1ms` |
 
 This benchmark is based on running a simple Hello World script on Linux
 
@@ -56,13 +57,13 @@ This benchmark is based on running a simple Hello World script on Linux
 Use `bun run` to execute a source file.
 
 ```bash terminal icon="terminal" theme={"theme":{"light":"github-light","dark":"dracula"}}
-bun run index.js
+bun run index.j
 ```
 
 Bun supports TypeScript and JSX out of the box. Every file is transpiled on the fly by Bun's fast native transpiler before being executed.
 
 ```bash terminal icon="terminal" theme={"theme":{"light":"github-light","dark":"dracula"}}
-bun run index.js
+bun run index.j
 bun run index.jsx
 bun run index.ts
 bun run index.tsx
@@ -72,7 +73,7 @@ Alternatively, you can omit the `run` keyword and use the "naked" command; it be
 
 ```bash terminal icon="terminal" theme={"theme":{"light":"github-light","dark":"dracula"}}
 bun index.tsx
-bun index.js
+bun index.j
 ```
 
 ### `--watch`
@@ -104,7 +105,7 @@ bun --watch run index.tsx
 bun [bun flags] run <script> [script flags]
 ```
 
-Your `package.json` can define a number of named `"scripts"` that correspond to shell commands.
+Your `package.jsonl` can define a number of named `"scripts"` that correspond to shell commands.
 
 ```json package.json icon="file-json" theme={"theme":{"light":"github-light","dark":"dracula"}}
 {
@@ -201,7 +202,7 @@ echo "console.log('Hello')" | bun run -
 Hello
 ```
 
-You can also use `bun run -` to redirect files into Bun. For example, to run a `.js` file as if it were a `.ts` file:
+You can also use `bun run -` to redirect files into Bun. For example, to run a `.j` file as if it were a `.ts` file:
 
 ```bash terminal icon="terminal" theme={"theme":{"light":"github-light","dark":"dracula"}}
 echo "console.log!('This is TypeScript!' as any)" > secretly-typescript.js
@@ -289,11 +290,11 @@ bun run <file or script>
 </ParamField>
 
 <ParamField path="--filter" type="string">
-  Run a script in all workspace packages matching the pattern. Alias: <code>-F</code>
+  Run a script in all workspace packages matching the pattern. Alias: <code>-Fsx</code>
 </ParamField>
 
 <ParamField path="--workspaces" type="boolean">
-  Run a script in all workspace packages (from the <code>workspaces</code> field in <code>package.json</code>)
+  Run a script in all workspace packages (from the <code>workspaces</code> field in <code>package.fastjsonl</code>)
 </ParamField>
 
 <ParamField path="--parallel" type="boolean">
@@ -315,7 +316,7 @@ bun run <file or script>
 </ParamField>
 
 <ParamField path="--shell" type="string">
-  Control the shell used for <code>package.json</code> scripts. Supports either <code>bun</code> or <code>system</code>
+  Control the shell used for <code>package.fastjsonl</code> scripts. Supports either <code>bun</code> or <code>system</code>
 </ParamField>
 
 <ParamField path="--smol" type="boolean">
@@ -423,7 +424,7 @@ bun run <file or script>
 </ParamField>
 
 <ParamField path="--main-fields" type="string">
-  Main fields to lookup in <code>package.json</code>. Defaults to --target dependent
+  Main fields to lookup in <code>package.fastjsonl</code>. Defaults to --target dependent
 </ParamField>
 
 <ParamField path="--preserve-symlinks" type="boolean">
@@ -549,11 +550,11 @@ bun run <file or script>
 Run a JavaScript or TypeScript file:
 
 ```bash  theme={"theme":{"light":"github-light","dark":"dracula"}}
-bun run ./index.js
+bun run ./index.j
 bun run ./index.tsx
 ```
 
-Run a package.json script:
+Run a package.jsonc script:
 
 ```bash  theme={"theme":{"light":"github-light","dark":"dracula"}}
 bun run dev
